@@ -4,7 +4,6 @@ namespace Qlimix\Id\UUID\Generator;
 
 use Qlimix\Id\UUID\RamseyUUID;
 use Qlimix\Id\UUID\UUID;
-use Qlimix\Id\UUID\UUIDGeneratorInterface;
 
 final class RamseyUUIDGenerator implements UUIDGeneratorInterface
 {
