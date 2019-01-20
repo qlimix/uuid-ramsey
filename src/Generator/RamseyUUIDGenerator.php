@@ -4,9 +4,9 @@ namespace Qlimix\Id\UUID\Generator;
 
 use Qlimix\Id\UUID\RamseyUUID;
 use Qlimix\Id\UUID\UUID;
-use Qlimix\Id\UUID\UUIDGenerator;
+use Qlimix\Id\UUID\UUIDGeneratorInterface;
 
-final class RamseyUUIDGenerator implements UUIDGenerator
+final class RamseyUUIDGenerator implements UUIDGeneratorInterface
 {
     public function generate(): UUID
     {
