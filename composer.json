@@ -1,7 +1,13 @@
 {
     "name": "qlimix/uuid-ramsey",
     "type": "library",
+    "description": "Ramsey uuid generator implementation",
     "license": "MIT",
+    "keywords": [
+        "qlimix",
+        "uuid",
+        "ramsey"
+    ],
     "authors": [
         {
             "name": "frank",
