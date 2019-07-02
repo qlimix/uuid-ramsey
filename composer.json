@@ -15,6 +15,7 @@
         }
     ],
     "require": {
+        "php": ">=7.2",
         "qlimix/uuid": "^1.0",
         "ramsey/uuid": "^3.8"
     },

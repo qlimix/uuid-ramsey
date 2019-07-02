@@ -1,7 +1,7 @@
 # uuid-ramsey
 
 [![Travis CI](https://api.travis-ci.org/qlimix/uuid-ramsey.svg?branch=master)](https://travis-ci.org/qlimix/uuid-ramsey)
-[![Coveralls](https://img.shields.io/coveralls/github/qlimix/uuid-ramsey.svg)](https://coveralls.io/qlimix/uuid-ramsey)
+[![Coveralls](https://img.shields.io/coveralls/github/qlimix/uuid-ramsey.svg)](https://coveralls.io/github/qlimix/uuid-ramsey)
 [![Packagist](https://img.shields.io/packagist/v/qlimix/uuid-ramsey.svg)](https://packagist.org/packages/qlimix/uuid-ramsey)
 [![MIT License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://github.com/qlimix/uuid-ramsey/blob/master/LICENSE)
 
