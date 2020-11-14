@@ -1,7 +1,10 @@
-## 2.0.0 - 11-03-2020
+## 2.0.0 - 14-11-2020
 
-New:
+### New
  - added Uuid generator version 1-5
 
-Backward compatibility:
+### Changes
+ - updated code standard
+
+### Backward compatibility
  - required PHP >= 7.4
