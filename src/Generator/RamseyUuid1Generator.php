@@ -3,14 +3,13 @@
 namespace Qlimix\Id\Uuid\Generator;
 
 use Qlimix\Id\Uuid\Generator\Exception\UuidGeneratorException;
-use Qlimix\Id\Uuid\Uuid;
+use Qlimix\Id\Uuid\Uuid1;
 use Ramsey\Uuid\UuidFactoryInterface;
 use Throwable;
 
-final class RamseyUuidGenerator implements UuidGeneratorInterface
+final class RamseyUuid1Generator implements Uuid1GeneratorInterface
 {
-    /** @var UuidFactoryInterface */
-    private $factory;
+    private UuidFactoryInterface $factory;
 
     public function __construct(UuidFactoryInterface $factory)
     {
@@ -20,12 +19,12 @@ final class RamseyUuidGenerator implements UuidGeneratorInterface
     /**
      * @inheritdoc
      */
-    public function generate(): Uuid
+    public function generate(): Uuid1
     {
         try {
-            return new Uuid($this->factory->uuid4()->toString());
+            return new Uuid1($this->factory->uuid1()->toString());
         } catch (Throwable $exception) {
-            throw new UuidGeneratorException('Failed to generate an UUID', 0, $exception);
+            throw new UuidGeneratorException('Failed to generate an UUID1', 0, $exception);
         }
     }
 }

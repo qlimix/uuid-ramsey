@@ -6,33 +6,28 @@ use Exception;
 use PHPUnit\Framework\MockObject\MockObject;
 use PHPUnit\Framework\TestCase;
 use Qlimix\Id\Uuid\Generator\Exception\UuidGeneratorException;
-use Qlimix\Id\Uuid\Generator\RamseyUuidGenerator;
+use Qlimix\Id\Uuid\Generator\RamseyUuid1Generator;
 use Ramsey\Uuid\Uuid;
 use Ramsey\Uuid\UuidFactoryInterface;
 
-final class RamseyUuidGeneratorTest extends TestCase
+final class RamseyUuid1GeneratorTest extends TestCase
 {
-    /** @var MockObject */
-    private $factory;
+    private MockObject $factory;
 
-    /** @var RamseyUuidGenerator */
-    private $generator;
+    private RamseyUuid1Generator $generator;
 
     public function setUp(): void
     {
         $this->factory = $this->createMock(UuidFactoryInterface::class);
-        $this->generator = new RamseyUuidGenerator($this->factory);
+        $this->generator = new RamseyUuid1Generator($this->factory);
     }
 
-    /**
-     * @test
-     */
-    public function shouldGenerateUuid(): void
+    public function testShouldGenerateUuid(): void
     {
-        $generatedUuid = Uuid::uuid4();
+        $generatedUuid = Uuid::uuid1();
 
         $this->factory->expects($this->once())
-            ->method('uuid4')
+            ->method('uuid1')
             ->willReturn($generatedUuid);
 
         $uuid = $this->generator->generate();
@@ -40,13 +35,11 @@ final class RamseyUuidGeneratorTest extends TestCase
         $this->assertSame($generatedUuid->toString(), $uuid->toString());
     }
 
-    /**
-     * @test
-     */
-    public function shouldThrowOnFactoryException(): void
+
+    public function testShouldThrowOnFactoryException(): void
     {
         $this->factory->expects($this->once())
-            ->method('uuid4')
+            ->method('uuid1')
             ->willThrowException(new Exception());
 
         $this->expectException(UuidGeneratorException::class);
