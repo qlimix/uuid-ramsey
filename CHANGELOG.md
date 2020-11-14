@@ -7,4 +7,4 @@
  - updated code standard
 
 ### Backward compatibility
- - required PHP >= 7.4
+ - required PHP > 7.4
